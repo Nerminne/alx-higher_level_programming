@@ -7,5 +7,5 @@ if __name__ == "__main__":
         none = "."
     print("{} arguments{}".format(argc, none))
 
-    for i in range(1, argc + 1):
+    for i in range(1, argc + 2):
         print("{}: {}".format(i, sys.argv[i]))
