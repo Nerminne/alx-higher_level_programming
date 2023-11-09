@@ -3,7 +3,12 @@ def search_replace(my_list, search, replace):
     if (len(my_list) == 0):
         return (None)
     new_list = my_list.copy()
-    index = new_list.index(search)
-    new_list.remove(search)
-    new_list.insert(index, replace)
+    index = 1
+    while (index != 0):
+        try:
+            index = new_list.index(search)
+            new_list.remove(search)
+            new_list.insert(index, replace)
+        except ValueError:
+            break
     return (new_list)
