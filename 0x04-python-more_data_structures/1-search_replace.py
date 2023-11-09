@@ -2,13 +2,10 @@
 def search_replace(my_list, search, replace):
     if (len(my_list) == 0):
         return (None)
-    new_list = my_list.copy()
-    index = 1
-    while (index != 0):
-        try:
-            index = new_list.index(search)
-            new_list.remove(search)
-            new_list.insert(index, replace)
-        except ValueError:
-            break
+    new_list = []
+    for x in my_list:
+        if (x == search):
+            new_list.append(replace)
+        else:
+            new_list.append(x)
     return (new_list)
