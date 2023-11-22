@@ -42,4 +42,4 @@ class Square:
             print("")
         else:
             for lines in range(0, self.__size):
-                    print("#" * self.__size)
+                print("#" * self.__size)
