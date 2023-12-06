@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write a function that reads a text file and prints it
+Write a function that reads text file and prints it
 """
 
 
