@@ -11,7 +11,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 try:
     data = load_from_json_file("add_item.json")
-except:
+except FileNotFoundError:
     data = []
 
 data.extend(sys.argv[1:])
