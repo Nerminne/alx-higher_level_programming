@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
 function factorial (num) {
-  let fact = 1;
-  for (let i = num; i > 0; i--) {
-    fact *= i;
-  }
-  return (fact);
+  if (num == 1) {
+    return (1);
 }
-const fact = factorial(process.argv[2] || 1);
-console.log(fact);
+  else {
+  return (num * factorial(num - 1));
+}
+}
+console.log(factorial(Number(process.argv[2]) || 1));
