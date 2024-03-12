@@ -10,7 +10,7 @@ if (process.argv.length <= 3) {
       arr[i] = 0;
     }
   }
-  let index = arr.indexOf(Math.max(...arr));
+  const index = arr.indexOf(Math.max(...arr));
   arr[index] = 0;
   num = Math.max(...arr);
 }
