@@ -15,7 +15,9 @@ request.get(url, function (err, response, body) {
           taskNum++;
         }
       } else {
-        info[usrid] = taskNum;
+        if (taskNum) {
+          info[usrid] = taskNum;
+        }
         usrid++;
         taskNum = 0;
         if (content[i].completed) {
@@ -23,7 +25,9 @@ request.get(url, function (err, response, body) {
         }
       }
     }
-    info[usrid] = taskNum;
+    if (taskNum) {
+      info[usrid] = taskNum;
+    }
     console.log(info);
   } else {
     console.log(`Error Code: ${response.statusCode}`);
