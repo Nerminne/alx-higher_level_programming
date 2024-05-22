@@ -4,6 +4,7 @@ const request = require('request');
 const url = process.argv[2];
 const charact = 'https://swapi-api.alx-tools.com/api/people/18/';
 let filmNum = 0;
+const charactId = '18';
 request.get(url, function (err, response, body) {
   if (err) {
     console.log(err);
