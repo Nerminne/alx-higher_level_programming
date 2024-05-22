@@ -23,6 +23,7 @@ request.get(url, function (err, response, body) {
         }
       }
     }
+    info[usrid] = taskNum;
     console.log(info);
   } else {
     console.log(`Error Code: ${response.statusCode}`);
