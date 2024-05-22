@@ -11,7 +11,7 @@ request.get(url, function (err, response, body) {
     const films = JSON.parse(body).results;
     for (let i = 0; i < films.length; i++) {
       for (let x = 0; x < films[i].characters.length; x++) {
-        if (films[i].characters[x] === charact) {
+        if (films[i].characters.includes(`https://swapi-api.alx-tools.com/api/people/${charactId}/`)) {
           filmNum++;
           break;
         }
