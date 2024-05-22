@@ -4,7 +4,6 @@ const request = require('request');
 const url = process.argv[2];
 const charact = 'https://swapi-api.alx-tools.com/api/people/18/';
 let filmNum = 0;
-const charactId = '18';
 request.get(url, function (err, response, body) {
   if (err) {
     console.log(err);
@@ -12,7 +11,7 @@ request.get(url, function (err, response, body) {
     const films = JSON.parse(body).results;
     for (let i = 0; i < films.length; i++) {
       for (let x = 0; x < films[i].characters.length; x++) {
-        if (films[i].characters.includes(`https://swapi-api.alx-tools.com/api/people/${charactId}/`)) {
+        if (films[i].characters[x] === charact) {
           filmNum++;
           break;
         }
